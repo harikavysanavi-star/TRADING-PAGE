@@ -1,0 +1,270 @@
+*{
+    margin:0;
+    padding:0;
+    box-sizing:border-box;
+    font-family:Arial,sans-serif;
+}
+
+body{
+    background:#0d1117;
+    color:white;
+}
+
+header{
+    background:#161b22;
+    padding:20px 50px;
+}
+
+nav{
+    display:flex;
+    justify-content:space-between;
+    align-items:center;
+}
+
+.logo{
+    font-size:24px;
+    font-weight:bold;
+    color:gold;
+}
+
+nav ul{
+    display:flex;
+    list-style:none;
+}
+
+nav ul li{
+    margin-left:20px;
+}
+
+nav ul li a{
+    color:white;
+    text-decoration:none;
+}
+
+.hero{
+    height:80vh;
+    display:flex;
+    justify-content:center;
+    align-items:center;
+    text-align:center;
+    background:linear-gradient(
+    rgba(197, 18, 18, 0.7),
+    rgba(0,0,0,0.7)),
+    url('https://images.unsplash.com/photo-1611974789855-9c2a0a7236a3');
+    background-size:cover;
+}
+
+.hero h1{
+    font-size:60px;
+}
+
+.hero p{
+    margin:20px 0;
+    font-size:20px;
+}
+
+.hero button{
+    padding:15px 35px;
+    background:gold;
+    border:none;
+    font-weight:bold;
+    animation: 3s;
+    cursor:pointer;
+}
+
+.hero button:hover{
+    background:#372fc0;
+}
+.stats{
+    display:flex;
+    justify-content:center;
+    gap:20px;
+    padding:50px;
+    flex-wrap:wrap;
+}
+
+.card{
+    background:#161b22;
+    padding:30px;
+    width:250px;
+    text-align:center;
+    border-radius:10px;
+}
+
+.card h2{
+    color:gold;
+    font-size:40px;
+}
+
+
+
+.icon-container{
+    display:flex;
+    gap:40px;
+    justify-content:center;
+    margin-top:50px;
+}
+
+.icon{
+    font-size:60px;
+    cursor:pointer;
+}
+
+
+.buy{
+    animation:pulseGreen 2s infinite;
+}
+
+@keyframes pulseGreen{
+    0%{
+        transform:scale(1);
+    }
+
+    50%{
+        transform:scale(1.2);
+    }
+
+    100%{
+        transform:scale(1);
+    }
+}
+
+
+.sell{
+    animation:shake 1.5s infinite;
+}
+
+@keyframes shake{
+    0%,100%{
+        transform:translateX(0);
+    }
+
+    25%{
+        transform:translateX(-5px);
+    }
+
+    75%{
+        transform:translateX(5px);
+    }
+}
+
+
+.gold{
+    animation:float 3s ease-in-out infinite;
+}
+
+@keyframes float{
+    0%{
+        transform:translateY(0);
+    }
+
+    50%{
+        transform:translateY(-15px);
+    }
+
+    100%{
+        transform:translateY(0);
+    }
+}
+.market{
+    padding:50px;
+    text-align:center;
+}
+
+.market-grid{
+    margin-top:30px;
+    display:flex;
+    gap:20px;
+    justify-content:center;
+    flex-wrap:wrap;
+}
+
+.market-card{
+    background:#161b22;
+    width:250px;
+    padding:25px;
+    border-radius:10px;
+    
+}
+
+.buy{
+    color:#00ff88;
+    font-weight:bold;
+     
+}
+
+.sell{
+    color:red;
+    font-weight:bold;
+}
+
+.features{
+    padding:50px;
+    text-align:center;
+}
+
+.feature-grid{
+    margin-top:30px;
+    display:flex;
+    gap:20px;
+    justify-content:center;
+    flex-wrap:wrap;
+}
+
+.feature{
+    background:#0a49a1;
+    width:300px;
+    padding:30px;
+    border-radius:10px;
+}
+
+footer{
+    text-align:center;
+    padding:20px;
+    background:#161b22;
+}
+
+@media(max-width:768px){
+
+.hero h1{
+    font-size:35px;
+}
+
+.stats,
+.market-grid,
+.feature-grid{
+    flex-direction:column;
+    align-items:center;
+}
+
+}.icon{
+    transition:0.5s;
+}
+
+.icon:hover{
+    transform:
+    rotateY(180deg)
+    scale(1.2);
+
+    filter:drop-shadow(
+    0 0 15px gold
+    );
+    .gold-icon{
+    font-size:80px;
+    color:gold;
+
+    animation:spin 4s linear infinite;
+}
+
+@keyframes spin{
+
+    from{
+        transform:rotateY(0deg);
+    }
+
+    to{
+        transform:rotateY(360deg);
+    }
+
+}
+}
